@@ -8,7 +8,7 @@ const contactsRoutes = require('./routes/contactsRoutes')
 
 app.use(express.urlencoded({extended : true}));
 //Middleware za parsiranje URL kodiranih podataka iz formulara
-
+app.use(express.json());
 
 app.use('/', contactsRoutes);
 //Ukljucujemo rute za kontakt aplikaciju
