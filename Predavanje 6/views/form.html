@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Definiše karakterni set stranice. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Podešava viewport za responzivan dizajn. -->
+    <title>Contact Form</title>
+    <!-- Naslov stranice. -->
+</head>
+<body>
+    <form action="/contacts" method="post">
+        <!-- HTML forma koja šalje podatke na '/contacts' rutu koristeći POST metodu. -->
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <!-- Polje za unos imena sa labelom. -->
+
+        <br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required>
+        <!-- Polje za unos telefona sa labelom. -->
+
+        <br>
+
+        <button type="submit">Add Contact</button>
+        <!-- Dugme za slanje forme. -->
+    </form>
+</body>
+</html>
