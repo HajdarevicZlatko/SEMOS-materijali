@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <div><%- include('partials/header')  %></div>
+        <div><%- include('partials/header')  %></div>
+        <span></span>
+        <%- include('partials/header')  %>
+        <h1><%= appName %></h1>
+        <% if(users.length > 0) { %>
+            <p>U listi ima <%= users.length %> korisnika u nasoj listi</p>
+            <table border="1">
+                <tr>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Email</th>
+                </tr>
+                <% users.forEach(user =>  {%>
+                    <tr>
+                        <td><%= user.firstName %> </td>
+                        <td><%= user.lastName %> </td>
+                        <td><%= user.email %> </td>
+                    </tr>
+                    <% } ) %>
+            </table>
+            <% } else { %>
+                <p>Ne postoje korisnici u listi</p>
+                <% } %>
+             <%- include('partials/footer')  %>
+    </body>
+</html>
