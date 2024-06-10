@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svi korisnici</title>
+    <link rel="slylesheet" href="/style.css"> <!-- Ovako ucitavamo css -->
+</head>
+<body>
+    <h1>Lista korisnika</h1>
+    <ul>
+        <% users.forEach(user => { %>
+            <li><%= user.firstName %> - <%= user.lastName %> - <%=user.email %></li>
+       <% } ) %>
+    </ul>
+    <a href="/">Vrati se na pocetnu stranicu</a>
+</body>
+</html>

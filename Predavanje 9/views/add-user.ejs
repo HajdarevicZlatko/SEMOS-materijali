@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj korisnika</title>
+    <link rel="slylesheet" href="/style.css"> <!-- Ovako ucitavamo css -->
+</head>
+<body>
+    <h1>Dodajte novog korisnika</h1>
+    <% if(error) { %>
+        <p style="color: red;"> <%= error %>   </p> <!-- Ovde cemo videti funkcionalnost POSTBACK-a -->
+        <% } %>
+
+    <form action="/add-user" method="POST">
+        <label for="firstName">First name:</label>
+        <input type="text" name="firstName" id="firstName" required><br> 
+
+        <label for="lastName">Last name:</label>
+        <input type="text" name="lastName" id="lastName" required><br>
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required><br>
+
+        <button type="submit">Dodaj korisnika</button>
+    </form>
+    <a href="/">Vrati se na pocetak</a>
+
+
+</body>
+</html>

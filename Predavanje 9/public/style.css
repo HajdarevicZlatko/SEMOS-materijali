@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: blue;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  ul li {
+    margin: 5px 0;
+  }
+  
