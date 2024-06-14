@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') %>
+    <title>Moja blog stranica</title>
+</head>
+<body>
+    <h1>Dobrodosli na nas blog</h1>
+    <ul>
+        <% blogs.forEach( blog => { %>
+            <li><a href="/blog/<%= blog.id %>"><%= blog.title %> </a></li>
+        <% }) %>
+    </ul>
+
+    <% if(admin === true) { %>
+        <h2>Dodajte novi blog</h2>
+
+        <form action="/blog/new" method="POST">
+            <label for="title"> Title:</label>
+            <input type="text" id="title" name="title" required>
+            <button type="submit">Dodaj blog</button>
+        </form>
+
+    <% } %>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
+
