@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') %>
+    <title><%= blog.title %></title>
+</head>
+<body>
+    <h1><%=blog.title %></h1>
+    <ul>
+        <% blog.posts.forEach(post => { %>
+            <li><%= post %></li>
+        <% }) %>
+    </ul>
+    <h2>Napisite novi post</h2>
+    <form action="/blogs/<%= blog._id %>" method="POST">
+        <label for="content">Sadrzaj:</label>
+        <textarea id="content" name="content" required></textarea>
+        <button type="submit">Dodaj novi post</button>
+    </form>
+    <%- include('partials/footer') %>
+</body>
+</html>
