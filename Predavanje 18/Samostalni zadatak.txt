@@ -1,0 +1,27 @@
+Naslov: Izrada CRUD REST Multitenant API-ja za Biblioteku
+
+Uvod
+U okviru ovog zadatka, potrebno je izraditi REST API za biblioteku koji podržava osnovne CRUD (Create, Read, Update, Delete) operacije. API treba biti multitenant, što znači da će podržavati više korisnika sa odvojenim podacima. Fokus zadatka je na back-end implementaciji bez front-end komponente.
+////////////////////////////////////////////////////////
+Autentifikacija
+
+Implementacija middleware-a za autentifikaciju korisnika.
+Autentifikacija će koristiti token baziran pristup.
+///////////////////////////////////////////////////////
+Rute za Knjige
+
+Kreiranje, čitanje, ažuriranje i brisanje podataka o knjigama.
+Svaka ruta treba omogućiti izvršavanje odgovarajućih CRUD operacija.
+////////////////////////////////////////////////////////
+Rute za Login
+
+Implementacija rute za prijavljivanje korisnika.
+Autentifikacija pomoću tokena (bez user-admin odvajanja).
+////////////////////////////////////////////////////////
+Kreiranje Korisnika
+
+Dodatna API ruta za kreiranje novih korisnika.
+Lozinka korisnika mora biti hešovana pre nego što se sačuva u bazi podataka.
+////////////////////////////////////////////////////////
+Zaključak
+Implementacija ovih zahteva će omogućiti razvoj robusnog i sigurnog API-ja za biblioteku, koji podržava osnovne funkcionalnosti upravljanja podacima o knjigama i korisnicima, uz bezbednu autentifikaciju i autorizaciju korisnika.
