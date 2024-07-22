@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  }
+}
