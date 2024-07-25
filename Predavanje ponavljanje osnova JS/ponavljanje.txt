@@ -1,0 +1,1 @@
+Ponavljanje osnova JavaScript-a nakon setovanja udaljene baze podataka
