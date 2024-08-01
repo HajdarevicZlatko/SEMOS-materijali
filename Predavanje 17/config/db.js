@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
+const path = require('path');
+require('dotenv').config({path : path.join(__dirname, '../.env')});
 
-const MONGODB_URI = "mongodb+srv://zlatkohajdarevic:5Hww796ooRG55azO@semoscluster.doagyil.mongodb.net/UsersValidateDatabase?retryWrites=true&w=majority&appName=SemosCluster";
-
-//Konekcija ka nasoj bazi
-mongoose.connect(MONGODB_URI,{useNewUrlParser : true, useUnifiedTopology : true})
-        .then(()=> console.log('Konektovana je aplikacija na bazu'))
-        .catch(err => console.log('Neuspela konekcija: '+err));
+mongoose.connect(process.env.MONGODB_URI, {
+        useNewUrlParser : true,
+        useUnifiedTopology : true,
+    })
+    .then(()=>console.log('Connected to DB'))
+    .catch(err => console.log('Failed to connected to DB', err));
 
 module.exports = mongoose;
